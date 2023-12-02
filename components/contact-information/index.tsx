@@ -46,7 +46,7 @@ type Props = {};
 const ContactInformation = (props: Props) => {
   return (
     <div className="fixed bottom-0 right-0 z-[9999]">
-      <div className="p-3">
+      <div className="p-3 mr-3">
         <ul className="space-y-2">
           <li>
             <div className="relative w-11 h-11 rounded-full">

@@ -48,10 +48,15 @@ const ContactInformation = (props: Props) => {
     <div className="fixed bottom-0 right-0 z-[9999]">
       <div className="p-3">
         <ul className="space-y-2">
+          <li>
+            <div className="relative w-11 h-11 rounded-full">
+              <FaceBook />
+            </div>
+          </li>
           {contacts.map((contact, index) => (
             <li key={index}>
               <a title={contact.title} href={contact.link} target="_blank">
-                <div className="relative w-8 md:w-[50px] h-8 md:h-[50px] rounded-full">
+                <div className="relative w-11 h-11 rounded-full">
                   <ImageCustom
                     image_alt={contact.title}
                     src={contact.image}
@@ -61,11 +66,6 @@ const ContactInformation = (props: Props) => {
               </a>
             </li>
           ))}
-          <li>
-            <div className="relative w-8 md:w-[50px] h-8 md:h-[50px] rounded-full">
-              <FaceBook />
-            </div>
-          </li>
         </ul>
       </div>
     </div>

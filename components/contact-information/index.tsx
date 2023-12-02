@@ -62,7 +62,9 @@ const ContactInformation = (props: Props) => {
             </li>
           ))}
           <li>
-            <FaceBook />
+            <div className="relative w-8 md:w-[50px] h-8 md:h-[50px] rounded-full">
+              <FaceBook />
+            </div>
           </li>
         </ul>
       </div>

@@ -12,7 +12,7 @@ const FaceBook = () => {
       <div id="fb-customer-chat" className="fb-customerchat"></div>
       <Script
         id="messenger-tag"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `{var chatbox = document.getElementById('fb-customer-chat');
           chatbox.setAttribute("page_id", "104955057763838");
@@ -21,7 +21,7 @@ const FaceBook = () => {
       ></Script>
       <Script
         id="messenger-sdk"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `{window.fbAsyncInit = function() {
             FB.init({

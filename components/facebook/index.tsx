@@ -10,20 +10,13 @@ const FaceBook = () => {
 
       {/* <!-- Your Chat plugin code --> */}
       <div id="fb-customer-chat" className="fb-customerchat"></div>
-      <Script
-        id="messenger-tag"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `{var chatbox = document.getElementById('fb-customer-chat');
+      <Script id="messenger-tag" strategy="lazyOnload">
+        {`
+          var chatbox = document.getElementById('fb-customer-chat');
           chatbox.setAttribute("page_id", "104955057763838");
-          chatbox.setAttribute("attribution", "biz_inbox");}`,
-        }}
-      ></Script>
-      <Script
-        id="messenger-sdk"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `{window.fbAsyncInit = function() {
+          chatbox.setAttribute("attribution", "biz_inbox");
+
+          window.fbAsyncInit = function() {
             FB.init({
               xfbml            : true,
               version          : 'v18.0'
@@ -36,9 +29,9 @@ const FaceBook = () => {
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));}`,
-        }}
-      ></Script>
+          }(document, 'script', 'facebook-jssdk'));
+        `}
+      </Script>
     </>
   );
 };

@@ -19,7 +19,7 @@ const FaceBook = () => {
           window.fbAsyncInit = function() {
             FB.init({
               xfbml            : true,
-              version          : 'v17.0'
+              version          : 'v18.0'
             });
           };
     

@@ -10,7 +10,7 @@ const FaceBook = () => {
 
       {/* <!-- Your Chat plugin code --> */}
       <div id="fb-customer-chat" className="fb-customerchat"></div>
-      <Script id="messenger-tag" strategy="lazyOnload">
+      <Script id="messenger-tag" strategy="afterInteractive">
         {`
           var chatbox = document.getElementById('fb-customer-chat');
           chatbox.setAttribute("page_id", "104955057763838");
@@ -19,7 +19,7 @@ const FaceBook = () => {
           window.fbAsyncInit = function() {
             FB.init({
               xfbml            : true,
-              version          : 'v18.0'
+              version          : 'v17.0'
             });
           };
     
